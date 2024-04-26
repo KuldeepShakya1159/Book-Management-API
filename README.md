@@ -10,7 +10,7 @@
 
 
  ## Authentication -   
- # For user Authentication , JWT is used with storing the tokens in cookies so while testing on postman , ensure to check the cookies .  
+  For user Authentication , JWT is used with storing the tokens in cookies so while testing on postman , ensure to check the cookies .  
 
 ### API  
      ## API:{  
