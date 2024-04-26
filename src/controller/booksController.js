@@ -18,7 +18,7 @@ const getBook = async(req,res)=>{
             return res.status(200).json({result:book})
         }
     }catch(err){
-        console.log("why here")
+
         return res.json({result:'cannot find book with id'})
     }
 }
@@ -34,7 +34,7 @@ const addBook = async(req,res)=>{
 
 const deleteBook = async(req,res)=>{
     try{
-        console.log(req.params.id)
+    
         const book = await booksService.deleteBook(req.params.id);
         return res.status(202).json({result:`${book} successfully deleted`})
 
@@ -53,8 +53,7 @@ const updateBook = async(req,res)=>{
 }
 
 const filterBook = async(req,res)=>{
-    console.log(req.query);
-   
+    
     try{
         let filter = {};
         const {author , publish_year} = req.query;
@@ -66,7 +65,7 @@ const filterBook = async(req,res)=>{
         }
 
         const books = await booksService.search(filter);
-        console.log(books);
+      
         if(books.length>0){
             return res.status(200).json({result:books})
         }else{
