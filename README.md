@@ -20,5 +20,6 @@
         "/api/books/add":"this api accepts book data and is jwt proteced . Only authorized users can access this route",  
         "/api/books/delete/:id":"this will delete the book matching with ID from db (Protected Route)",  
         "/api/books/update/:id":"this will update the book with id (Protected route)",  
-        "api/books/filter/:key":"this route will filter the books based on publish year or author ."  
+        "api/books/filter?publish_year=2001":"this route will filter the books based on publish year or author. Make sure to pass the author name or publish year as 
+        follow api/books/filter?publish_year=2001, api/books/filter?author=JK "  
        }
