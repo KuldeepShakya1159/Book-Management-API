@@ -27,8 +27,8 @@ const deleteBook = async(id)=>{
 }
 
 const updateBook = async(id,data)=>{
-    console.log(id)
-    console.log(data)
+
+ 
     const book = await booksModel.updateOne(
         {_id:id},
         {
@@ -42,10 +42,10 @@ const updateBook = async(id,data)=>{
 const search = async(key)=>{
 
     try{
-        console.log(key,"+===============from service")
+     
         const books = await booksModel.find(key);
 
-        console.log(books);
+    
 
         if(books.length>0){
             return books
